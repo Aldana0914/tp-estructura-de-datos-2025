@@ -1,5 +1,6 @@
 # tp-estructura-de-datos-2025
-aldana y marko
+Aldana Ibarra y Marco de Hoyos
+
 # Sistema de Gestión de Correos en Python
 Este proyecto simula un sistema simple de mensajería (entre usuarios) utilizando programación orientada a objetos. Incluye funciones para poder enviar, recibir, listar y organizar mensajes en carpetas que corresponden a una bandeja de entrada.
 
