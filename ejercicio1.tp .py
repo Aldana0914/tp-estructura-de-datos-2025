@@ -8,7 +8,7 @@ class GestionCorreo(ABC):
     @abstractmethod    
     def recibir_mensaje(self, mensaje):
         pass
-     @abstractmethod    
+    @abstractmethod    
     def recibir_mensaje(self, mensaje):
         pass
 
