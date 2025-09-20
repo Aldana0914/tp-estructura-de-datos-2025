@@ -25,3 +25,7 @@ El sistema simula el comportamiento de un servidor de correo y la interacción d
 3. Durante el primer día se estableció la base principal del codigo, este incluia las distintas clases a utilizar (GestionCorreo(interfaz), ServidorCorreo, Usuario, Mensaje, Carpeta).
 4. Posteriormente se implementaron los atributos y los distintos metodos para cada clase.
 5. Una vez concluida la estructuración del código se paso a la fase de elaboración del diagrama en base al codigo para poder visualizar la relación entre las clases.
+
+# Diagrama de Flujo (en imagen)
+
+![alt text](ServidorCorreo.jpg)
