@@ -1,7 +1,7 @@
 from servidor import ServidorCorreo
 
 # Clase ServidorCorreo
-class ServidorCorreo:  #Representa el servidor de mensajeria
+class ServidorCorreo: #Representa el servidor de mensajeria
     def __init__(self, email): # Construye la estructura.
         self._email = email # Registra el email del usuario.
         self._usuarios = [] # Lista de usuarios en la que se guardaran los mismos.
