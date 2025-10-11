@@ -29,3 +29,24 @@ El sistema simula el comportamiento de un servidor de correo y la interacción d
 # Diagrama de Flujo (en imagen)
 
 ![alt text](ServidorCorreo.jpg)
+
+Entrega 2: Estructuras de Datos y Recursividad
+
+Se implementó un sistema de carpetas y subcarpetas usando una estructura recursiva tipo árbol, donde cada carpeta puede contener mensajes y otras carpetas dentro.
+
+El programa permite:
+
+Crear y eliminar carpetas.
+
+Agregar, eliminar y mover mensajes entre carpetas.
+
+Realizar búsquedas recursivas de mensajes por asunto o remitente.
+
+Cada carpeta es un nodo del árbol que contiene una lista de mensajes y una lista de subcarpetas.
+Las búsquedas y movimientos se hacen de forma recursiva, recorriendo todo el árbol.
+
+En cuanto a eficiencia:
+
+Crear carpetas o agregar mensajes.
+
+Búsquedas y movimientos recursivos.

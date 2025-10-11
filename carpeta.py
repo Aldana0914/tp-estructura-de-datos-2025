@@ -19,3 +19,4 @@ class Carpeta: #Se crea la carpeta correspondiente.
         if mensaje in self._mensajes: #Busqueda de msj en la lista de msjs
             self._mensajes.remove(mensaje) #Elimina msj de una lista
             
+            

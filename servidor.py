@@ -18,3 +18,4 @@ class ServidorCorreo: #Representa el servidor de mensajeria
 
     def obtener_usuarios(self):
         return self._usuarios  # Devuelve la lista de usuarios total en el servidor.
+        
