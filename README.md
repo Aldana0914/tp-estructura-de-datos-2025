@@ -26,6 +26,44 @@ El sistema simula el comportamiento de un servidor de correo y la interacción d
 4. Posteriormente se implementaron los atributos y los distintos metodos para cada clase.
 5. Una vez concluida la estructuración del código se paso a la fase de elaboración del diagrama en base al codigo para poder visualizar la relación entre las clases.
 
+
+# Diagrama de Flujo (en imagen)
+
+![alt text](ServidorCorreo.jpg)
+
+Entrega 2: Estructuras de Datos y Recursividad
+
+Se implementó un sistema de carpetas y subcarpetas usando una estructura recursiva tipo árbol, donde cada carpeta puede contener mensajes y otras carpetas dentro.
+
+El programa permite:
+
+Crear y eliminar carpetas.
+
+Agregar, eliminar y mover mensajes entre carpetas.
+
+Realizar búsquedas recursivas de mensajes por asunto o remitente.
+
+Cada carpeta es un nodo del árbol que contiene una lista de mensajes y una lista de subcarpetas.
+Las búsquedas y movimientos se hacen de forma recursiva, recorriendo todo el árbol.
+
+En cuanto a eficiencia:
+
+Crear carpetas o agregar mensajes.
+
+Búsquedas y movimientos recursivos.
+
+## Entrega 3 de Programación Orientada a Objetos.
+El trabajo consistió en crear un *simulador de correo electrónico* aplicando los conceptos de clases, herencia, composición y polimorfismo en Python.
+
+Durante el desarrollo tuvimos varios desafíos. Al principio, nos costó organizarnos con la estructura de las clases y cómo hacer que los filtros funcionaran correctamente. Fuimos probando distintas maneras de aplicar el filtrado de spam y bloqueados, hasta lograr que el sistema los clasificara automáticamente en las carpetas correspondientes.
+
+También tuvimos que ajustar cómo se manejaban los mensajes urgentes, para que se procesaran en el orden correcto sin interferir con los mensajes comunes.
+
+En mi caso, *no tengo computadora en este momento porque se me rompió*, así que gran parte del trabajo lo hicimos de forma colaborativa:
+yo le fui pasando a Marcos toda la información, las ideas del diseño y las pruebas que quería que hiciera. Nos conectamos varias veces para revisar el código juntos y hacer los cambios necesarios. Marcos fue quien se encargó de escribir y probar el código en su máquina, mientras que yo me dediqué más a revisar la lógica, la estructura y la documentación.
+
+A pesar de las dificultades técnicas, logramos terminar el simulador completo y funcional. Aprendimos bastante sobre cómo organizar un proyecto grande con varias clases, y sobre cómo trabajar en equipo a distancia, compartiendo ideas y responsabilidades.
+
 ---
 
 ## 📌 Descripción del Sistema
@@ -85,28 +123,3 @@ Administración de usuarios en un servidor de correo.
 - Devuelve todos los usuarios registrados
 
 ---
-
-# Diagrama de Flujo (en imagen)
-
-![alt text](ServidorCorreo.jpg)
-
-Entrega 2: Estructuras de Datos y Recursividad
-
-Se implementó un sistema de carpetas y subcarpetas usando una estructura recursiva tipo árbol, donde cada carpeta puede contener mensajes y otras carpetas dentro.
-
-El programa permite:
-
-Crear y eliminar carpetas.
-
-Agregar, eliminar y mover mensajes entre carpetas.
-
-Realizar búsquedas recursivas de mensajes por asunto o remitente.
-
-Cada carpeta es un nodo del árbol que contiene una lista de mensajes y una lista de subcarpetas.
-Las búsquedas y movimientos se hacen de forma recursiva, recorriendo todo el árbol.
-
-En cuanto a eficiencia:
-
-Crear carpetas o agregar mensajes.
-
-Búsquedas y movimientos recursivos.
