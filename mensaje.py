@@ -1,15 +1,15 @@
 from mensaje import Mensaje
 
-class Mensaje:
+class Mensaje: # Sea crea el mensaje 
 
-    def __init__(self, emisor, destinatarios, asunto, contenido, urgente=False):
+    def __init__(self, emisor, destinatarios, asunto, contenido,urgente=false):
+
         self._emisor = emisor
         self._destinatarios = destinatarios  # Puede ser una lista o string
         self._asunto = asunto
-        self._contenido = contenido
-        self._urgente = urgente  # Para la cola de prioridades (Entrega 3)
+        self._contenido = contenido   
+        self._urgente = urgente 
 
-    # ====== PROPIEDADES ======
     @property
     def emisor(self):
         return self._emisor
@@ -26,9 +26,13 @@ class Mensaje:
     def contenido(self):
         return self._contenido
 
-    @property
     def urgente(self):
-        return self._urgente
+        return self.urgente
 
-    def __str__(self):
-        return f"Asunto: {self._asunto} | De: {self._emisor} | Urgente: {self._urgente}"
+    def _str_(self):#devuelde el mensaje legible 
+        priorida="urgente "
+      if self._urgente
+         else "normal"
+        return f"de:{self._emisor}/npara:{self._destinatarios}/nasunto:{self._asunto}||urgente:{self._urgente}|nprioridad:{priorida}|ncontenido:{self._contenido}"
+        
+

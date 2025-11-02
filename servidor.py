@@ -20,6 +20,16 @@ class ServidorCorreo: #Representa el servidor de mensajeria
 
     def obtener_usuarios(self):
         return self._usuarios  # Devuelve la lista de usuarios total en el servidor.
+<<<<<<< HEAD
+
+    def buscar_usuarios_por_email(self,email):
+        for usuarios in self._usuarios:
+            if usuario.email == email:
+                return usuario
+            return none 
+                
+        
+===
 
     def buscar_usuario_por_email(self, email):
         """Busca un usuario por su email y lo devuelve, o None si no existe."""
@@ -79,3 +89,4 @@ class ServidorCorreo:
     def filtro(self):
         """Devuelve el filtro del servidor."""
         return self._filtro
+>>>>>>> c8af4098942475a4c3db03868ce2a80231c3955a
