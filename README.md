@@ -52,7 +52,7 @@ Crear carpetas o agregar mensajes.
 
 Búsquedas y movimientos recursivos.
 
-## Entrega 3 de Programación Orientada a Objetos.
+## Entrega 3 de Programación Orientada a Objetos. 31/10 - 01/11
 El trabajo consistió en crear un *simulador de correo electrónico* aplicando los conceptos de clases, herencia, composición y polimorfismo en Python.
 
 Durante el desarrollo tuvimos varios desafíos. Al principio, nos costó organizarnos con la estructura de las clases y cómo hacer que los filtros funcionaran correctamente. Fuimos probando distintas maneras de aplicar el filtrado de spam y bloqueados, hasta lograr que el sistema los clasificara automáticamente en las carpetas correspondientes.
@@ -123,3 +123,57 @@ Administración de usuarios en un servidor de correo.
 - Devuelve todos los usuarios registrados
 
 ---
+
+---
+
+###  Red.py (Grafos)
+
+Simula una red de servidores interconectados (grafo).
+*Funciones principales:*
+
+* agregar_servidor(servidor) → añade un servidor a la red.
+* conectar_servidores(nombre1, nombre2) → conecta dos servidores.
+* recorrido_bfs(inicio) → recorre la red utilizando el algoritmo BFS, mostrando los servidores visitados.
+
+---
+
+###  ColaPrioridad.py
+
+Maneja una *cola de prioridad* para los mensajes urgentes.
+*Funciones principales:*
+
+* agregar(mensaje) → inserta mensajes, dando prioridad a los urgentes.
+* procesar() → procesa los mensajes en orden de prioridad.
+
+---
+
+### Filtros.py
+
+Contiene filtros automáticos que clasifican los mensajes.
+*Subclases:*
+
+* FiltroSpam → busca palabras prohibidas y envía los mensajes a la carpeta “Spam”.
+* FiltroBloqueados → bloquea mensajes cuyo emisor esté en la lista negra.
+
+Ambos heredan de la clase abstracta Filtro, que define el método aplicar().
+
+---
+
+### SimuladorCorreo.py`
+
+Archivo principal que integra todas las clases.
+Incluye una función demo() que ejecuta una simulación completa:
+
+1. Crea servidores y usuarios.
+2. Aplica filtros a un usuario.
+3. Envía distintos tipos de mensajes (normales, spam y urgentes).
+4. Procesa la cola de urgentes.
+5. Muestra las bandejas de mensajes y el recorrido de la red de servidores.
+
+#Conceptos aplicados
+
+* *Encapsulamiento:* manejo interno de atributos dentro de cada clase.
+* *Herencia:* los filtros heredan de una clase base.
+* *Polimorfismo:* distintos filtros implementan el mismo método aplicar().
+* *Composición:* un usuario contiene carpetas, filtros y una cola de prioridad.
+* *Abstracción:* se modelan entidades reales (usuario, mensaje, servidor, red)
