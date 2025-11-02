@@ -26,6 +26,66 @@ El sistema simula el comportamiento de un servidor de correo y la interacción d
 4. Posteriormente se implementaron los atributos y los distintos metodos para cada clase.
 5. Una vez concluida la estructuración del código se paso a la fase de elaboración del diagrama en base al codigo para poder visualizar la relación entre las clases.
 
+---
+
+## 📌 Descripción del Sistema
+
+El sistema permite simular el manejo de un correo electrónico con funcionalidades básicas como:
+
+### 👤 Usuarios (`usuario.py`)
+Cada usuario tiene:
+- Un nombre y dirección de email
+- Una referencia al servidor al que pertenece
+- Tres carpetas por defecto:
+  - Inbox (mensajes recibidos)
+  - Enviados
+  - Papelera
+
+✅ **Envia y recibe mensajes**  
+✅ **Puede mover mensajes entre carpetas**  
+✅ **Accede a sus carpetas y subcarpetas**  
+
+---
+
+### 📬 Mensajes (`mensaje.py`)
+Cada mensaje incluye:
+- Emisor
+- Lista de destinatarios
+- Asunto
+- Contenido del mensaje
+
+No incluye fechas ni IDs automáticos (simple y directo).
+
+---
+
+### 🗂️ Carpetas y Subcarpetas (`carpeta.py`)
+Las carpetas:
+- Guardan mensajes
+- Pueden tener subcarpetas
+- Pueden buscar mensajes de manera **recursiva**
+- Soportan mover mensajes de una carpeta a otra (también recursivo)
+
+#### ✅ Funcionalidades clave:
+| Acción                         | Soporte |
+|--------------------------------|---------|
+| Agregar mensaje                | ✅      |
+| Eliminar mensaje               | ✅      |
+| Agregar subcarpeta             | ✅      |
+| Buscar mensaje (asunto / texto / emisor) | ✅ (recursivo) |
+| Mover mensaje entre carpetas/subcarpetas | ✅ (recursivo) |
+
+> Nota: Si el mensaje no se encuentra, el método **no falla**, solo no hace nada.
+
+---
+
+### 🖥️ Servidor (`servidor.py`)
+Administración de usuarios en un servidor de correo.
+
+- Agrega y elimina usuarios
+- Devuelve todos los usuarios registrados
+
+---
+
 # Diagrama de Flujo (en imagen)
 
 ![alt text](ServidorCorreo.jpg)

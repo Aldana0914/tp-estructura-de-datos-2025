@@ -1,8 +1,6 @@
-from usuario import Usuario
 from ejercicio1 import GestionCorreo
 from carpeta import Carpeta
 from mensaje import Mensaje
-
 
 class Usuario(GestionCorreo):
     def __init__(self, nombre, email, servidor):
@@ -40,3 +38,9 @@ class Usuario(GestionCorreo):
         if carpeta in self._carpetas:
             return self._carpetas[carpeta].listar_mensaje()
         return [] 
+
+    def mover_mensaje(self, mensaje, carpeta_origen, carpeta_destino):
+        if carpeta_origen in self._carpetas and carpeta_destino in self._carpetas:
+            self._carpetas[carpeta_origen].mover_mensaje(
+                mensaje, self._carpetas[carpeta_destino]
+            )
