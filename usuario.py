@@ -2,6 +2,7 @@ from ejercicio1 import GestionCorreo
 from carpeta import Carpeta
 from mensaje import Mensaje
 
+
 class Usuario(GestionCorreo):
     def __init__(self, nombre, email, servidor):
         self._nombre = nombre
@@ -44,3 +45,14 @@ class Usuario(GestionCorreo):
             self._carpetas[carpeta_origen].mover_mensaje(
                 mensaje, self._carpetas[carpeta_destino]
             )
+            
+    def recibir_mensaje(self, mensaje):
+        """Recibe un mensaje, aplica el filtro del servidor y lo guarda en la carpeta correspondiente (Inbox, Spam, Bloqueados). """
+    #Aplicar filtro global del servidor
+        carpeta_destino = self._servidor.filtro.aplicar(mensaje)
+        #Crear carpeta si no existe aún
+        if carpeta_destino not in self._carpetas:
+            self._carpetas[carpeta_destino] = Carpeta(carpeta_destino)
+        #Guardar el mensaje en la carpeta que corresponda
+            self._carpetas[carpeta_destino].agregar_mensaje(mensaje)    
+            print(f"📥 Mensaje recibido por {self._email} → guardado en: {carpeta_destino}")
