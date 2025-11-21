@@ -1,5 +1,3 @@
-from mensaje import Mensaje
-
 class Mensaje:
     def __init__(self, emisor, destinatarios, asunto, contenido, urgente=False):
         self._emisor = emisor

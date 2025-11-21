@@ -1,6 +1,3 @@
-from carpeta import Carpeta
-
-
 class Carpeta: #Se crea la carpeta correspondiente.
     def __init__(self, nombre):
         self._nombre = nombre #Recibe el nombre de la carpeta (inbox, enviados, etc)
@@ -17,12 +14,12 @@ class Carpeta: #Se crea la carpeta correspondiente.
     def agregar_mensaje(self, mensaje): #Se define la función y recibe el mensaje
         self._mensajes.append(mensaje)
 
-    def elimnar_mensaje(self, mensaje): #Se define la función y se recibe el parametro del mensaje
+    def eliminar_mensaje(self, mensaje): #Se define la función y se recibe el parametro del mensaje
         if mensaje in self._mensajes: #Busqueda de msj en la lista de msjs
             self._mensajes.remove(mensaje) #Elimina msj de una lista
             
     def agregar_subcarpeta(self, subcarpeta): #Agrega subcarpetas a la carpeta
-        self.subcarpetas.append(subcarpeta)
+        self._subcarpetas.append(subcarpeta)
         
     def buscar_mensaje(self, texto):
         resultado = []
