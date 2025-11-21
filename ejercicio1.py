@@ -11,6 +11,6 @@ class GestionCorreo(ABC):
 
     @abstractmethod
     def listar_mensaje(self, carpeta):
-        pass   
+        pass
 
 
