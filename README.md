@@ -177,3 +177,115 @@ Incluye una función demo() que ejecuta una simulación completa:
 * *Polimorfismo:* distintos filtros implementan el mismo método aplicar().
 * *Composición:* un usuario contiene carpetas, filtros y una cola de prioridad.
 * *Abstracción:* se modelan entidades reales (usuario, mensaje, servidor, red)
+
+---
+
+# *Entrega 4: Integración y Menú Principal (20/11; 22/11)*
+
+## 📌 Objetivo de la Entrega 4
+
+En esta entrega se integraron todas las clases desarrolladas previamente (*Mensaje, **Carpeta, estructura recursiva de carpetas y funciones de búsqueda) en un único programa funcional que permite al usuario interactuar mediante un **menú principal*.
+
+El archivo central de esta entrega es *main.py*, que se encarga de unir todas las partes del proyecto.
+
+---
+
+# 🧩 Contenido de la Entrega 4
+
+## ✔ *1. Integración de las Clases*
+
+Se importan las clases:
+
+* Mensaje
+* Carpeta
+
+Estas clases ya estaban desarrolladas en entregas anteriores, pero ahora se combinan dentro del flujo completo del programa.
+
+---
+
+## ✔ *2. Creación de la Carpeta Raíz*
+
+Se crea la carpeta principal del sistema, por ejemplo:
+
+
+Inbox
+
+
+A partir de esta carpeta se pueden:
+
+* Crear subcarpetas
+* Agregar mensajes
+* Buscar mensajes
+* Mover mensajes
+
+La estructura queda organizada como un *árbol de carpetas*, donde cada carpeta puede tener otras dentro.
+
+---
+
+## ✔ *3. Implementación del Menú Principal (main.py)*
+
+Se implementa un *menú interactivo* que permite al usuario ejecutar operaciones del sistema.
+
+Las opciones incluidas son:
+
+### 🔹 1) Crear carpeta
+
+Permite crear una carpeta nueva en el nivel raíz.
+
+### 🔹 2) Crear subcarpeta
+
+Permite agregar una subcarpeta dentro de otra.
+
+### 🔹 3) Agregar mensaje
+
+Solicita datos del mensaje:
+remitente, destinatario, asunto y contenido.
+Luego lo guarda en una carpeta seleccionada.
+
+### 🔹 4) Buscar mensaje
+
+Permite buscar por:
+
+* Asunto
+* Remitente
+  La búsqueda es *recursiva* en todas las carpetas y subcarpetas.
+
+### 🔹 5) Mover mensaje
+
+Mueve un mensaje desde una carpeta origen hacia otra carpeta destino.
+
+### 🔹 6) Mostrar estructura de carpetas
+
+Imprime el árbol completo, mostrando carpetas y subcarpetas con identación.
+
+### 🔹 7) Salir
+
+Cierra el programa.
+
+---
+
+# ⚙️ Funcionamiento General del Programa
+
+El archivo main.py:
+
+1. Inicializa la carpeta principal
+2. Muestra el menú
+3. Recibe opciones del usuario
+4. Llama a los métodos de las clases según la acción seleccionada
+5. Mantiene el programa en ejecución hasta que el usuario elija "Salir"
+
+Todo el funcionamiento depende del trabajo realizado en entregas anteriores, pero *Entrega 4 es la que une todo para que funcione como un sistema real*.
+
+---
+
+#  Conclusión
+
+La Entrega 4 representa la fase final del proyecto, donde se integran:
+
+* Programación Orientada a Objetos
+* Recursividad
+* Árboles de carpetas
+* Gestión de mensajes
+* Interacción con el usuario
+
+El resultado es un sistema completo que simula una casilla de correo simplificada.
