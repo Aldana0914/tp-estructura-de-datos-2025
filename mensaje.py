@@ -6,7 +6,7 @@ class Mensaje:
         self._contenido = contenido
         self._urgente = urgente  # Para la cola de prioridades (Entrega 3)
 
-    # ====== PROPIEDADES ======
+    # ===== PROPIEDADES =====
     @property
     def emisor(self):
         return self._emisor
